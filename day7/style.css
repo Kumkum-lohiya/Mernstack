@@ -1,0 +1,125 @@
+/* #container{
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+
+}
+#box
+{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+} */
+
+/* #container,#box{
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+} */
+/* descendant selector : jab parent ki madad se children pr css lgana ho  */
+/* 
+div p {
+    font-size: 30px;
+    color: blueviolet;
+} */
+ /* do parent ko ek sath use nhi kr skte hai */
+/* #container,#container2 .para,.para1 {  
+    font-size: 30px;
+    color: blueviolet;
+} */
+
+/* div>p{
+    color: blueviolet;
+    font-size: 30px;
+} */
+
+/* Adjacent sibling two type 1.adjacent sibling 2.general sibling */
+/* + sign just  next ko select krne ke liye 
+~  sign sare same tag ko lene ke liye */
+/* h1~p{
+    color: chocolate;
+    font-size: 30px;
+} */
+
+/* pseudo selectors  */
+/* pseudo classes [denoted by (:)]:- focus, hover, link, active, visited, nth child, last child, first child ,empty*/
+/* pseudo elements :- before , after , placeholder ,selection */
+/* input{
+    outline: none;
+    border: none;
+    padding: 10px;
+    box-shadow: 5px 4px 8px 1px grey;
+} */
+
+input:focus{
+    /* background-color: cadetblue;
+    color: beige; */
+    /* border: 3px solid red; */
+
+}
+/* #container{
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    transition:2s ease-in-out;
+}
+#container:hover{
+    height: 300px;
+    width: 300px;
+    background-color: chocolate;
+    border-radius: 50%;
+} */
+
+a{
+    font-size: 30px;
+}
+/* a:active{
+    color:yellow;
+} */
+
+/* button{
+    padding:10px;
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    font-size: 30px;
+}
+button:active{
+    background-color: orange;
+    color: white;
+} */
+
+/* a:visited{
+    color: green;
+} */
+/* a:link{
+    color: red;
+}
+a:visited{
+    color:green;
+}
+a:hover{
+    color: yellow;
+}
+a:active{
+    color: orange;
+} */
+
+/* li:last-child{
+    background-color: lightcoral;
+} */
+
+/* p:last-child{
+    background-color:green;
+}
+p:first-child{
+    background-color: burlywood;
+} */
+li:nth-child(2n){
+    background-color: cadetblue;
+
+}
+li:nth-child(2n+1)
+{
+    background-color: chocolate;
+}

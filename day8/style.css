@@ -1,0 +1,125 @@
+/* pseudo elements */
+/* input{
+    width:200px;
+    height:20px;
+    background: linear-gradient(orange,blue);
+}
+input:focus{
+    background-color: bisque;
+    color:brown
+}
+input::placeholder{
+    color:brown;
+}
+p::selection{
+    background-color: bisque;
+    color: green;
+}
+
+::selection{|
+   
+} */
+h1::before{
+    /* content: "Hello Techno";
+    background-color: red; */
+    content: "";
+    background-color: red;
+    display: inline-block;
+    width: 10vw;
+    height: 2px;
+    position: relative;
+    top: -8px;
+    /* margin-right: 2px; */
+}
+h1::after{
+  content: "";
+    background-color: red;
+    display: inline-block;
+    width: 10vw;
+    height: 2px;
+    position: relative;
+    top: -8px;
+    /* margin-left: 2px;    */
+}
+
+/* p::first-letter{
+   
+    color: brown;
+    font-size: 50px;
+}
+p::first-line{
+    background-color: cadetblue;
+}
+ */
+
+#container{
+    /* height: 200px;
+    width: 98vw;
+    background-color: cadetblue;
+    position:sticky;
+    top:0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index:-1; */
+    /* right:0;
+    bottom: 0; */
+    /* border: 5px solid rgb(1, 46, 48); */
+}
+/* #box{
+    height: 100px;
+    width: 100px;
+    background-color: bisque;
+    position:absolute;
+    top:10;
+    left:0;
+    border: 5px solid rgb(85, 48, 3);
+
+} */
+
+/* div{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+#container{
+ height: 400px;
+ width: 400px;
+ background-color: lightblue;
+ position:absolute;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+#box{
+    height: 300px;
+    width: 300px;
+    background-color: lightcoral;
+    z-index: 1;
+  
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#item{
+    width: 200px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+    z-index: 2;
+
+}
+ */
+
+ /* tranform - translate, rotate, scale, skew */
+
+ #container{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    /* transform:translate(50px,60px); */
+    transform: rotate(99deg);
+    color:white;
+    font-size: 20px;
+ }

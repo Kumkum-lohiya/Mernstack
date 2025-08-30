@@ -1,0 +1,40 @@
+header{
+    font-size:30px;
+}
+#navbar{
+    background-color: red;
+    height:10vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size:2rem;
+    color: white;
+}
+
+span{
+    font-size: 0.7rem;
+    color: white;
+    padding: 40px;
+    margin:100px;
+    
+}
+a{
+    padding:10px;
+    color: white;
+    font-size:0.7rem;
+}
+main{
+    height: 100vh;
+    width:100vw;
+
+}
+#box{
+   padding:30px;
+   font-size: 4rem;
+   
+   margin:50px;
+}
+button{
+    display:grid
+    
+}

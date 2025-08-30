@@ -1,0 +1,13 @@
+
+.container{
+    display: inline-block;
+    width: 100px;
+    height: 200px;
+    background-color: cadetblue;
+    border: 1px solid beige;
+}
+#parent-container{
+    display:flex;
+    justify-content: center;
+
+}

@@ -1,0 +1,82 @@
+/* #container{
+    width:300px;
+    height: 300px;
+    background-color: cadetblue;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    
+    padding: 20px 30px 40ppx;
+    margin: 10px 20px 30px 40px;
+    border-style: dashed dotted  double solid;
+    border-color: black red green blue;
+   border-width: 10px 20px 30px 40px;
+   border-radius: 200px;
+
+    padding:20px;
+    margin: 100px;
+    border: 5px solid black;
+    box-sizing:border-box;
+    margin: collapse;
+    display: inline-block;
+   border-radius: 0px 50% 0px 0px;
+   box-shadow: 100x 100px 10px grey
+    
+
+} */
+
+#container{
+    height: 200px;
+    width: 200px;
+    background-color: cadetblue;
+    /* display: inline; -- ismai jitna content hota hai ye us according hi space leta hai  jabki inline block block ke according set hota hai*/
+    display: inline-block;
+}
+#container1{
+    height: 200px;
+    width: 200px;
+    background-color:chocolate;
+    display: inline-block;
+}
+
+
+
+/* #box{
+    display: none;
+    visibility: hidden;
+    width: 400px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: auto; 
+    display:inline-block;
+} */
+
+/* body{
+    width: 100vw;
+    height: 100vh;
+    background-color: cadetblue;
+}
+
+#box
+{
+    width: 50%;
+    height: 50%;
+    background-color:beige;
+}
+#item
+{
+     width: 50%;
+    height: 50%;
+    background-color:bisque;
+} */
+
+html{
+    font-size: 50px;
+}
+#box{
+    font-size: 1rem;
+}
+#item{
+    font-size: 0.5em;
+}

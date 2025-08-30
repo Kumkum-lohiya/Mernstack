@@ -1,0 +1,2609 @@
+<!DOCTYPE html>
+<html lang="en" style="width:100%;overflow-x:hidden;">
+<head>
+    <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRBR-3e999030a12e14fece2",applicationID:"685069429"};;/*! For license information please see nr-loader-rum-1.295.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):"object"==typeof e[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>s});var n=r(384),i=r(122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,a)},324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.295.0",i="PROD",a="CDN"},154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>d,bv:()=>a,gm:()=>s,mw:()=>o,sb:()=>u});var n=r(863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)())},241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>u,Ze:()=>f,x3:()=>d});var n=r(241),i=r(836),a=r(606),s=r(860),o=r(646);const c={};function u(e,t){const r={staged:!1,priority:s.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function d(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{c[e].delete(t),p(e,t)})))}function p(e,t,r=!0){const s=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!s.aborted&&s.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof o.y&&t[0].on(e,t[1])}))}))}}s.isolatedBacklog||delete c[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}}))}},836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(990),a=r(646),s=r(607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach((e=>{e.apply(o,r)}));var u=v()[s[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,(()=>new a.y(o))):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c)},646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(566).bz)()},566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e)).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(a(r,i++).toString(16));return s.join("")}},614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>s});var n=r(241);const i=new Set,a={};function s(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every((e=>{if(i.has(e))return i.get(e);const t="function"==typeof e&&e.toString().includes("[native code]");return t||(0,n.R)(64,e?.name||e?.toString()),i.set(e,t),t}))}},289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>a,Qr:()=>o,sB:()=>s});var n=r(878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(i())return e();(0,n.sp)("load",e,t)}function s(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}function o(e){if(i())return e();(0,n.sp)("popstate",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>s,US:()=>d,Zm:()=>o,bQ:()=>u,dV:()=>c,pV:()=>l});var n=r(154),i=r(863),a=r(910);const s={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function o(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function c(){let e=o();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function u(e,t){let r=o();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function d(e,t){o()[e]=t}function l(){return function(){let e=o();const t=e.info||{};e.info={beacon:s.beacon,errorBeacon:s.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),c(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},773:(e,t,r)=>{"use strict";r.d(t,{z_:()=>a,XG:()=>o,TZ:()=>n,rs:()=>i,xV:()=>s});r(154),r(566),r(384);const n=r(860).K7.metrics,i="sm",a="cm",s="storeSupportabilityMetrics",o="storeEventMetrics"},630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(836),i=r(687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e){return this.#e(i.Dl,e)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(){return this.#e(i.dT)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}}},261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>u,BL:()=>o,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Tb:()=>l,U2:()=>a,V1:()=>k,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>s,nb:()=>m,o5:()=>d});const n="api-",i="addPageAction",a="addToTrace",s="addRelease",o="finished",c="interaction",u="log",d="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",k="measure"},163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(741);var a=r(555);r(860).K7.genericEvents;const s="experimental.marks",o="experimental.measures",c="experimental.resources",u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(614),l=r(944),f=r(122);const g="[data-nr-mask]",p=e=>(0,f.a)(e,(()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{allow_registered_children:!0,duplicate_registered_data:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(s)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(o)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(g):""===t||null===t?e.mask_selector=g:(0,l.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var m=r(154),h=r(324);let v=0;const b={buildEnv:h.F3,distMethod:h.Xs,version:h.xv,originTime:m.WN},y={appMetadata:{},customTransaction:void 0,denyList:void 0,disabled:!1,entityManager:void 0,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,jsAttributesMetadata:{bytes:0},get harvestCount(){return++v}},_=e=>{const t=(0,f.a)(e,y),r=Object.keys(b).reduce(((e,t)=>(e[t]={value:b[t],writable:!1,configurable:!0,enumerable:!0},e)),{});return Object.defineProperties(t,r)};var w=r(701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var k=r(836),A=r(241);const S={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},T=e=>(0,f.a)(e,S),R=new Set;function E(e,t={},r,s){let{init:o,info:c,loader_config:u,runtime:d={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,u=e.loader_config}e.init=p(o||{}),e.loader_config=T(u||{}),c.jsAttributes??={},m.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,g=[c.beacon,c.errorBeacon];R.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),g.push(f.proxy.assets)),f.proxy.beacon&&g.push(f.proxy.beacon),function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach((r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})}))}(e),(0,n.US)("activatedFeatures",w.B),e.runSoftNavOverSpa&&=!0===f.soft_navigations.enabled&&f.feature_flags.includes("soft_nav")),d.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?g:[]],d.ptid=e.agentIdentifier,d.loaderType=r,e.runtime=_(d),R.has(e.agentIdentifier)||(e.ee=k.ee.get(e.agentIdentifier),e.exposed=l,(0,A.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),R.add(e.agentIdentifier)}},374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>d,K7:()=>c,P3:()=>u,XX:()=>i,Yy:()=>o,df:()=>a,qY:()=>n,v4:()=>s});const n="events",i="jserrors",a="browser/blobs",s="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},u={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},d={[c.pageViewEvent]:s,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:o,[c.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.295.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.295.0.PROD:",i.l=(r,n,a,s)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==a)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){o=l;break}}if(!o){c=!0;var f={296:"sha512-5mjLs4V+vqmVCMY5tMI4S9zuik2ZQGpHyNyS3JjzoMIc9MrdQiFKTHsXuapkHWyDEDo06Z3nazEbjwKKn3drdA=="};(o=document.createElement("script")).charset="utf-8",o.timeout=120,i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+a),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),f[s]&&(o.integrity=f[s])}e[r]=[n];var g=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=g.bind(null,o.onerror),o.onload=g.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=a);var s=i.p+i.u(t),o=new Error;i.l(s,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),s=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed.\n("+a+": "+s+")",o.name="ChunkLoadError",o.type=a,o.request=s,n[1](o)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[s,o,c]=r,u=0;if(s.some((t=>0!==e[t]))){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);u<s.length;u++)a=s[u],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.295.0.PROD"]=self["webpackChunk:NRBA-1.295.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(374);var e=i(566),t=i(741);class r extends t.W{agentIdentifier=(0,e.LA)(16)}var n=i(860);const a=Object.values(n.K7);var s=i(163);var o=i(908),c=i(863),u=i(261),d=i(241),l=i(944),f=i(701),g=i(773);function p(e,t,i,a){const s=a||i;!s||s[e]&&s[e]!==r.prototype[e]||(s[e]=function(){(0,o.p)(g.xV,["API/"+e+"/called"],void 0,n.K7.metrics,i.ee),(0,d.W)({agentIdentifier:i.agentIdentifier,drained:!!f.B?.[i.agentIdentifier],type:"data",name:"api",feature:u.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,l.R)(23,e)}})}function m(e,t,r,n,i){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(i||null===r)&&(0,o.p)(u.Pl+n,[(0,c.t)(),t,r],void 0,"session",e.ee)}var h=i(687),v=i(234),b=i(289),y=i(154),_=i(384);const w=e=>y.RI&&!0===e?.privacy.cookies_enabled;function x(e){return!!(0,_.dV)().o.MO&&w(e)&&!0===e?.session_trace.enabled}var k=i(389);class A extends v.W{constructor(e,t){super(e.agentIdentifier,t),this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise(((t,r)=>{this.ee.on("manual-start-all",(0,k.J)((()=>{(0,h.Ak)(e.agentIdentifier,this.featureName),t()})))})):(0,h.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;let a;this.onAggregateImported=new Promise((e=>{a=e}));const s=async()=>{let s;await this.deferred;try{if(w(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,305));s=t(e)}}catch(e){(0,l.R)(20,e),this.ee.emit("internal-error",[e]),this.featureName===n.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,s,e.init))return(0,h.Ze)(this.agentIdentifier,this.featureName),void a(!1);const{Aggregate:n}=await t();this.featAggregate=new n(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),a(!0)}catch(e){(0,l.R)(34,e),this.abortHandler?.(),(0,h.Ze)(this.agentIdentifier,this.featureName,!0),a(!1),this.ee&&this.ee.abort()}};y.RI?(0,b.GG)((()=>s()),!0):s()}#t(e,t,r){switch(e){case n.K7.sessionReplay:return x(r)&&!!t;case n.K7.sessionTrace:return!!t;default:return!0}}}var S=i(630),T=i(614);class R extends A{static featureName=S.T;constructor(e){var t;super(e,S.T),this.setupInspectionEvents(e.agentIdentifier),t=e,p(u.Fw,(function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,o.p)(u.Pl+u.Fw,[(0,c.t)()],void 0,void 0,t.ee))}),t),this.ee.on("api-send-rum",((e,t)=>(0,o.p)("send-rum",[e,t],void 0,this.featureName,this.ee))),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,108))))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,d.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,b.sB)((e=>{t(e,"DOMContentLoaded")})),(0,b.GG)((e=>{t(e,"load")})),(0,b.Qr)((e=>{t(e,"navigate")})),this.ee.on(T.tS.UPDATE,((t,r)=>{(0,d.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})}))}}var E=i(843),N=i(878),j=i(782);class I extends A{static featureName=j.T;constructor(e){super(e,j.T),y.RI&&((0,E.u)((()=>(0,o.p)("docHidden",[(0,c.t)()],void 0,j.T,this.ee)),!0),(0,N.sp)("pagehide",(()=>(0,o.p)("winPagehide",[(0,c.t)()],void 0,j.T,this.ee))),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,350)))))}}class O extends A{static featureName=g.TZ;constructor(e){super(e,g.TZ),y.RI&&document.addEventListener("securitypolicyviolation",(e=>{(0,o.p)(g.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)})),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,373))))}}new class extends r{constructor(e){var t;(super(),y.gm)?(this.features={},(0,_.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===n.K7.softNav)),(0,s.j)(this,e,e.loaderType||"agent"),t=this,p(u.cD,(function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return m(t,e,r,u.cD,n);(0,l.R)(40,typeof r)}else(0,l.R)(39,typeof e)}),t),function(e){p(u.Dl,(function(t){if("string"==typeof t||null===t)return m(e,"enduser.id",t,u.Dl,!0);(0,l.R)(41,typeof t)}),e)}(this),function(e){p(u.nb,(function(t){if("string"==typeof t||null===t)return m(e,"application.version",t,u.nb,!1);(0,l.R)(42,typeof t)}),e)}(this),function(e){p(u.d3,(function(){e.ee.emit("manual-start-all")}),e)}(this),this.run()):(0,l.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return a.forEach((r=>{t[r]=!!e[r]?.enabled})),t}(this.init),t=[...this.desiredFeatures];t.sort(((e,t)=>n.P3[e.featureName]-n.P3[t.featureName])),t.forEach((t=>{if(!e[t.featureName]&&t.featureName!==n.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&t.featureName===n.K7.spa)return;if(!this.runSoftNavOverSpa&&t.featureName===n.K7.softNav)return;const r=function(e){switch(e){case n.K7.ajax:return[n.K7.jserrors];case n.K7.sessionTrace:return[n.K7.ajax,n.K7.pageViewEvent];case n.K7.sessionReplay:return[n.K7.sessionTrace];case n.K7.pageViewTiming:return[n.K7.pageViewEvent];default:return[]}}(t.featureName).filter((e=>!(e in this.features)));r.length>0&&(0,l.R)(36,{targetFeature:t.featureName,missingDependencies:r}),this.features[t.featureName]=new t(this)}))}catch(e){(0,l.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,_.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}({features:[R,I,O],loaderType:"lite"})})()})();</script>
+    <meta name="description" content="Domino's Pizza Menu BANGALORE CENTRAL Bangalore - Browse through Veg/Non-Veg pizza menu & order food online from your nearest restaurants for home delivery & takeaway.">
+	<meta name="keywords" content=" order pizza online,dominos pizza BANGALORE CENTRAL">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title> Domino’s Pizza Menu BANGALORE CENTRAL, Bangalore | Order Food Online - Domino's Pizza</title>
+	
+		<!-- CSS For Coupons --> 		
+	<!--<link href="assets/css/style.css" rel="stylesheet" type="text/css">-->
+    <link href="/store-location/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="/store-location/owl.carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="/store-location/assets/css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="/store-location/assets/css/animsition.min.css" rel="stylesheet" type="text/css">
+    <!-- CSS For Coupons -->
+	<!-- css -->
+    <link href="/store-location/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/store-location/css/font-awesome.css" rel="stylesheet" />
+    <link href="/store-location/css/cubeportfolio.min.css" rel="stylesheet" />
+    <link href="/store-location/css/style.css" rel="stylesheet" />
+    <link href="/store-location/css/style.min.css" rel="stylesheet" />
+    <link href="/store-location/css/inputEffects.css" rel="stylesheet" />
+    <link href="/store-location/css/custom.css" rel="stylesheet" />
+	<link href="/store-location/css/single-page-home.css" rel="stylesheet" />
+    <link href="/store-location/css/Media-Querry.css" rel="stylesheet" />
+	<link href="/store-location/css/new-pages.css" rel="stylesheet" />
+
+	<!-- Theme skin -->
+    <link id="t-colors" href="/store-location/skins/default.css" rel="stylesheet" />
+    <!-- boxed bg -->
+    <link id="bodybg" href="/store-location/bodybg/bg1.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="https://www.dominos.co.in/theme2/front/images/mobile-images/mbl-logo.png" type="image/png" sizes="32x32">
+
+<style>
+.nav-tabs>li>a {
+    font-family: 'Roboto', sans-serif;
+    margin-right: 2px;
+    text-transform: uppercase;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 2px 2px 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.cus-nav-tabs>li>a {
+    font-family: 'SegoeUI-SemiBold', Roboto, Open Sans, Arial, sans-serif !important;
+    margin-right: 2px;
+    text-transform: uppercase;
+    line-height: 36px !important;
+    border: 1px solid transparent;
+    border-radius: 2px 2px 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.cus-nav-tabs>li.active>a, .cus-nav-tabs>li.active>a:hover, .cus-nav-tabs>li.active>a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 0px solid #ddd;
+    border-bottom: 4px solid #e61a39;
+    padding-bottom: 7px;
+}
+.MobileMenuContainer {
+    margin-top: 20px;
+}
+.order-now-button:hover {
+    color: #fff !important;
+    background-color: #e61a39 !important;
+    font-size: 20px !important;
+    font-weight: 600;
+    width: auto !important;
+    line-height: 42px;
+    border-color: transparent;
+    transition: all 0.5s;
+    padding: 0px 20px;
+} 
+.order-now-button {
+	color: #fff !important;
+    background-color: #e61a39 !important;
+    font-size: 20px !important;
+    font-weight: 600;
+    width: auto !important;
+    line-height: 42px;
+    border-color: transparent;
+    transition: all 0.5s;
+    padding: 0px 20px;
+}
+    
+.ratting {
+    background: #FFBA00;
+    border-color: #FFBA00!important;
+    width: 80px;
+    padding: 1px;
+    text-align: center;
+    float: right;
+	border-radius: .28571429rem;
+}
+.ratting-text {
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+}
+.ratting-text2 {
+	font-size: 22px;
+    opacity: .5;
+}
+.nib {
+    display: inline-block;
+    height: 15px;
+}
+.nib > img {
+    width: 18px;
+    height: auto;
+    margin-top: 4px;
+}
+.ratting-button {
+    margin-right: 8px;
+}
+
+
+.love-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.mtop0 {
+    margin-top: 10px;
+}
+.love-section {
+    width: 50%;
+}
+.grey-text, .zdark {
+     color: #505050 !important;
+}
+.grey-text, .zdark {
+    color: #505050 !important;
+}
+.love-bar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 15px;
+    max-width: 130px;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+.mt5 {
+    margin-top: 5px;
+}
+.love-bar .block:first-child {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.love-bar .block:not(:last-child) {
+    border-right: 1px solid #fff;
+    border-color: #fff!important;
+}
+.love-bar .block {
+    width: 20%;
+}
+.level-4 {
+    background: #FFBA00;
+    border-color: #FFBA00!important;
+}
+.level-6 {
+    background: #9ACD32;
+    border-color: #9ACD32!important;
+}
+.mb-12{
+	margin-bottom:12px !important;
+}
+/*#################### For Menu Sections ##################*/
+.shadow {
+    background: #FFF !important;     
+    box-shadow: 1px 2px 5px 1px #ddd;
+    min-height: 255px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: .28571429rem;
+}
+img.pizza_img {
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+}
+p.pizza_content {
+    font-size: 14px;
+    line-height: 17px;
+    min-height: 52px;
+}
+.cus-tab-content {
+    background: transparent !important;
+    border: 0px solid #e7e7e7;
+    padding: 0;
+    box-shadow: none;
+    border-radius: .28571429rem;
+    margin-top: 24px;
+}
+.cus-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cus-flex > .shadow:last-child {
+    margin-right: 0 !important;
+}
+.orderButton {
+    color: #fff !important;
+    background-color: #e61a39 !important;
+    font-size: 20px !important;
+    font-weight: 600;
+    width: 100%;
+    line-height: 42px;
+    border-color: transparent;
+    transition: all 0.5s;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+.orderButton:hover {
+    color: #fff !important;
+    background-color: #ce122f !important;
+    border-color: transparent;
+}
+#header {
+    position: fixed;
+}    
+    
+/*#################### Media-Querry For Tab ##################*/
+
+@media (max-width: 1024px){
+.cus-flex {
+    display: block !important;
+    flex-direction: row;
+    justify-content: center;
+}
+.cus-flex > .shadow:last-child {
+    margin-right: 10px !important;
+}
+.shadow {
+	text-align:center; 
+}
+
+}
+
+@media (max-width: 768px){
+.padding-0-mob {
+	padding:0 !important;
+}
+.order-now-button {
+    width: 100% !important;
+}
+.order-now-button:hover {
+    width: 100% !important;
+}
+    
+}
+@media (min-width: 768px) and (max-width:992px){
+.right-sidebar{
+	display:none !important;
+}
+.cus-tab-content{
+    padding: 0 !important;
+}
+.MobileMenuContainer {
+    margin-top: 20px;
+    overflow-y: hidden;
+}
+.cus-nav-tabs {
+    width: 100vw !important;
+}
+.cus-nav-tabs>li>a {
+    border-right: 1px solid #ddd !important;
+    min-width: 134px;
+    text-align: center;
+}
+    
+}
+@media (max-width: 480px){
+.cus-nav-tabs>li>a {
+    border-right: 1px solid #ddd !important;
+    min-width: 100px !important;
+    text-align: center;
+}
+ul.cus-nav-tabs > li {
+    /*width: 50%; */
+    text-align: center;
+}
+.cus-nav-tabs>li>a {
+    font-size: 14px;
+}
+.cus-nav-tabs>li.active>a,
+.cus-nav-tabs>li.active>a:hover,
+.cus-nav-tabs>li.active>a:focus {
+    padding-bottom: 8px !important;
+    font-size: 14px !important;
+}
+}
+#map {
+        height: 100%;
+		width: 388px !important;
+		margin-left: -15px;
+      }
+#map-container {
+    border: 1px solid #E7E7E7;
+    border-radius: 0.285714rem;
+    background: #FFF none repeat scroll 0% 0%;
+	height:460px;
+    margin-bottom: 20px;
+}
+.pl-0{
+    padding-left: 0 !important;
+}
+@media (min-width: 992px){
+.cus-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 14px !important;
+}
+.MobileMenuContainer {
+    margin-top: 10px;
+}
+.cus-tab-content {
+    margin-top: 6px;
+}
+}
+
+
+*,
+        :after,
+        :before {
+            box-sizing: border-box;
+        }
+
+        .container,
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .nbs-flexisel-container {
+            position: relative;
+            max-width: 100%;
+            float: left;
+        }
+
+        .nbs-flexisel-inner {
+            overflow: hidden;
+            margin-bottom: 20px;
+            float: left;
+            width: 100%;
+            border-top: 0;
+            background-color: #fff;
+        }
+
+        h3 {
+            float: left;
+            width: 100%;
+            display: flex;
+            align-content: center;
+            border: 0;
+            justify-content: center;
+            border-left: none;
+            border-right: 0;
+            background: transparent;
+            padding: 0 !important;
+            text-align: center;
+            border: 0;
+        }
+
+        .nbs-flexisel-ul {
+    position: relative;
+    width: 99999px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+ul#flexiselDemo3 li {
+    cursor: text;
+}
+.blue ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nbs-flexisel-item {
+    float: left;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+}
+
+        #flexiselDemo3 .inner-part {
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        .inner-part {
+            padding: 10px 40px;
+            cursor: text;
+        }
+
+        .inner-part {
+            text-align: center;
+        }
+
+        #flexiselDemo3 .inner-part .inner-part-2 {
+            padding: 10px 0 0;
+            border: 0;
+            background-color: #fff;
+            color: #323232;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        #flexiselDemo3 h4 {
+            margin-top: 0;
+            width: 100%;
+            position: static;
+            margin-left: 0 !important;
+            font-size: 16px;
+            text-align: center;
+            color: #505050;
+            text-decoration: none;
+        }
+
+        #flexiselDemo3 .inner-part a {
+            text-decoration: none;
+            text-transform: uppercase;
+            outline: 0;
+            font-family: OpenSans-Regular;
+            font-size: 16px;
+            color: #c8102e;
+            font-weight: normal;
+        }
+
+        .white-outlet-brand .rating1 {
+            padding-bottom: 10px;
+        }
+
+        ul#flexiselDemo3 li {
+            cursor: text;
+        }
+
+        .blue ul li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .rating1 ul li span.rating_full {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background: url(images/rating_star_small.png);
+            background-repeat: repeat;
+            background-repeat: no-repeat;
+        }
+
+        #flexiselDemo3 p {
+            border-bottom: 1px solid #d9d9d9;
+            padding-bottom: 10px;
+            line-height: 20px;
+        }
+
+        #flexiselDemo3 p {
+            padding: 0;
+            background: 0;
+            margin: 0;
+        }
+
+        .blue p span {
+            font-family: OpenSans-Regular;
+        }
+
+        .blue p span {
+            font-family: lato;
+            font-weight: normal;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .white-outlet-brand .mng-span-leftB {
+            padding-top: 10px;
+            float: left;
+            width: 100%;
+            padding-bottom: 20px;
+            font-size: 15px;
+            color: #323232;
+            font-family: OpenSans-Regular;
+        }
+
+        ul#flexiselDemo3 li {
+            cursor: text;
+        }
+
+        .white-outlet-brand .mng-span-leftB li {
+            float: left;
+            width: 100%;
+        }
+
+        ul#flexiselDemo3 li {
+    cursor: text;
+}
+.blue ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nbs-flexisel-item {
+    float: left;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+}
+
+        #flexiselDemo3 p.service_test_drive {
+            width: 100%;
+            padding: 10px 0 !important;
+            background-color: #d3d3d3;
+            color: #000;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding-top: 0;
+            bottom: 0;
+        }
+
+        #flexiselDemo3 p.service_test_drive {
+            border: 0;
+        }
+
+        #flexiselDemo3 p.service_test_drive span {
+            border-right: 0;
+            text-transform: uppercase;
+        }
+
+        #flexiselDemo3 p.service_test_drive span {
+            background-image: url(../../img/checkbox-ixon.png);
+            background-repeat: no-repeat;
+            padding-left: 20px;
+            background-position: 0 6px;
+            font-size: 11px;
+            margin-right: 10px;
+        }
+
+        .rating1 ul {
+            display: inline-block;
+        }
+
+        ul#flexiselDemo3 li {
+            cursor: text;
+        }
+
+        .blue ul li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .nbs-flexisel-item {
+            float: left;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            position: relative;
+            line-height: 0;
+        }
+
+        .rating1 ul li span.rating_full {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background: url(../../img/rating_star_small.png);
+            background-repeat: repeat;
+            background-repeat: no-repeat;
+        }
+
+        .rating1 ul li span.rating_empty {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background: url(../../img/rating_star_small_grey.png);
+            background-repeat: repeat;
+            background-repeat: no-repeat;
+        }
+
+        .rating1 ul li span.rating_half {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background: url(../../img/rating_star_red_grey-small.png);
+            background-repeat: repeat;
+            background-repeat: no-repeat;
+        }
+
+        #flexiselDemo3 p {
+            border-bottom: 1px solid #d9d9d9;
+            padding-bottom: 10px;
+        }
+
+        #flexiselDemo3 p {
+            padding: 0;
+            background: 0;
+            margin: 0;
+        }
+
+        .inner-part p {
+            padding-bottom: 0;
+            font-family: Interstate-RegularCondensed_4;
+        }
+
+        .inner-part p {
+            max-height: 100%;
+        }
+
+        .blue p span {
+            font-family: OpenSans-Regular;
+        }
+
+        .blue p span {
+            font-family: Interstate-RegularCondensed_4;
+        }
+
+        .blue p span {
+            font-family: lato;
+            font-weight: normal;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .white-outlet-brand .mng-span-leftB {
+            padding-top: 10px;
+            float: left;
+            width: 100%;
+            padding-bottom: 20px;
+            font-size: 15px;
+            color: #323232;
+            font-family: OpenSans-Regular;
+        }
+
+        ul#flexiselDemo3 li {
+            cursor: text;
+        }
+
+        .white-outlet-brand .mng-span-leftB li {
+            float: left;
+            width: 100%;
+        }
+
+        .nbs-flexisel-nav-left {
+            left: -11px;
+            background: url(../../img/previous.png) no-repeat;
+            width: 47px;
+            top: 30%;
+        }
+
+        .nbs-flexisel-nav-right {
+            right: -9px;
+            background: url(../../img/next.png) no-repeat;
+            width: 47px;
+            top: 30%;
+        }
+
+        .nbs-flexisel-nav-left,
+        .nbs-flexisel-nav-right {
+            width: 48px;
+            height: 52px;
+            position: absolute;
+            cursor: pointer;
+            z-index: 100;
+        }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MW6ZCB');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW6ZCB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="pg-header col-xs-12 pd-N" id="header">
+        <div class="col-xs-12 pd-N">
+            <div class="container-fluid pd-LR">
+                <div class="col-xs-12 pd-LR" id="pg-menu">
+                    <div class="container pd-LR">
+                        <div class="col-md-3 hidden-xs pull-right home-order-online pd-N">
+                            <div class="order-online">
+                                <div class="col-md-10 pd-N pull-right">
+                                    <a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local"> <span class="online-text">Order online now</span> <span class="arrow-right"></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-4 col-sm-2 logo pd-LR">
+                            <div class="visible-xs menu-btn noActionOnBodyClick" ><span class="noActionOnBodyClick">&nbsp;</span><span class="noActionOnBodyClick">&nbsp;</span><span class="noActionOnBodyClick">&nbsp;</span> </div>
+                            <a class="hidden-xs" href="https://www.dominos.co.in/home" title="Domino's"><img class="img-responsive" src="https://www.dominos.co.in/theme2/front/images/dominos-logo-241x53.png" alt="Domino's Logo" title="Domino's"> </a>
+                            <a class="visible-xs" href="https://www.dominos.co.in/home" title="Domino's"><img class="img-responsive" src="https://www.dominos.co.in/theme2/front/images/mobile-images/mbl-logo.png" alt="Domino's Logo" title="Domino's"> </a>
+                        </div>
+                        <div class="col-md-7 col-sm-10 col-xs-8 pull-right menu-scroll pd-LR">
+                            <ul class="nav nav-tabs list-header" role="tablist">
+                                <li class=""><a href="https://www.dominos.co.in/menu" class="menu-tree" title="Our Menu" role="tab" target="">OUR MENU</a><span></span> </li>
+                                <li class=""><a href="https://www.dominos.co.in/great-deals/online-pizza-coupons" class="hidden-xs" title="OFFERS" role="tab" target="">OFFERS</a><span></span> </li>
+                                <li class=""><a href="https://www.dominos.co.in/great-deals/online-pizza-coupons" class="visible-xs" title="OUR DEALS" role="tab" target="">OUR DEALS</a><span></span> </li>
+                                <li class=""><a href="https://www.dominos.co.in/store-location" class="" title="STORE" role="" target="_blank">STORE FINDER</a><span></span> </li>
+                                <li class=""><a href="https://www.dominos.co.in/about-us" class="hidden-xs" title="INSIDE DOMINOS" role="" target="">INSIDE DOMINOS</a><span></span> </li>
+                                <li class=""><a href="https://www.dominos.co.in/gift-vouchers" class="hidden-xs hidden-sm" title="GIFT VOUCHERS" role="" target="">GIFT CARD</a><span></span> </li>
+								<li class=""><a href="https://www.dominos.co.in/contact" class="hidden-xs hidden-sm" title="contact" role="" target="">CONTACT</a><span></span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="shadow-box" onclick="closeNav()"></div>
+                    <div class="visible-xs col-xs-12 pd-LR noActionOnBodyClick" id="side-menu" >
+                        <ul class="nav navbar-nav" role="tablist">
+                            <li class="active">
+                                <a href="https://www.dominos.co.in/home" class="" title="Home" role="tab" target="">
+                                    <!--<img class="mR" src="" alt="" title="">--><span>Home</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/menu" class="menu-tree" title="Our Menu" role="tab" target=""> <span>Our menu</span> </a><span></span> </li>
+                            <!--<li class="">
+                                <a href="https://www.dominos.co.in/great-deals/online-pizza-coupons" class="hidden-xs" title="DEALS" role="tab" target=""> <span>DEALS</span> </a><span></span> </li>-->
+                            <li class="">
+                                <a href="https://www.dominos.co.in/great-deals/online-pizza-coupons" class="visible-xs" title="OFFERS" role="tab" target=""> <span>Offers</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/store-location" class="" title="STORE" role="" target="_blank">
+                                    <!--<img class="mR" src="" alt="" title="">--><span>Store Finder</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/about-us" class="" title="INSIDE DOMINOS" role="" target=""> <span>Inside Dominos</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/great-deals/gift-vouchers" class="" title="GIFT CARD" role="" target=""> <span>Gift Card</span> </a><span></span> </li>
+							<li class="">
+                                <a href="https://www.dominos.co.in/contact" class="" title="CONTACT" role="" target=""><span>Contact</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/bday-party" class="" title="BIRTHDAY" role="" target=""> <span>Birthday Party</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/wedding" class="hide" title="CATERING" role="" target=""> <span>Corporate Orders</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://dominos.co.in/blog/" class="" title="BLOG" role="" target="_blank">
+                                    <!--<img class="mR" src="" alt="" title="">--><span>Blog</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="http://www.jubilantfoodworks.com/investors/" class="" title="INVESTORS" role="" target="_blank"> <span>Investors</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/feedback" class="" title="FEEDBACK" role="" target="">
+                                    <!--<img class="mR" src="" alt="" title="">--><span>Contact Us</span> </a><span></span> </li>
+                            <li class="">
+                                <a href="https://www.dominos.co.in/advertisement" class="" title="ADS" role="" target="">
+                                    <!--<img class="mR" src="" alt="" title="">--><span>Ads</span> </a><span></span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+    <div id="wrapper">
+        <section id="content">
+		   <div class="container container-mobile">
+			   <div class="scp-breadcrumb">
+				<ul class="breadcrumb">
+					<li><a href="https://www.dominos.co.in">Home</a></li>
+					<li><a href="/store-location/bangalore">Bangalore</a></li>
+					<li><a href="/store-location/bangalore/bangalore-central" style="text-transform:capitalize;">BANGALORE CENTRAL</a></li>
+					<li><a style="color: #e61a39 !important;" href="javascript:void(0)">Menu</a></li>
+				</ul>
+				</div>
+                <!-- <div class="row">
+                <div class="col-md-12 col-lg-12">
+				<h1 class="heading1 medium">Dominos, Mumbai </h1>
+				<p class="light-grey search-store-count medium"> All Results (129 places) </p>
+				</div>
+				</div> -->
+                <div class="row mb-20">
+					<div class="padding-0-mob pl-0 col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<img class="img-responsive" src="/store-location/img/Fresh-Pizza.jpg" alt="Fresh-Pizza">
+						<div class="clearfix card custom-card-main-sec">
+							<div class="padding-0 col-xs-12 col-sm-8 col-md-10 col-lg-10">
+							<div class="main-title-description">	
+								<h1 class="bold dark-grey store-desktop-main-title"> Domino's Pizza Menu BANGALORE CENTRAL, Bangalore </h1> 
+								<p class="grey-text store-page-address">Soul Space Spirit, 4th Floor Food Court, Outer Ring Road, Near Sarjapura Bellandur Junction, Bengaluru, Karnataka 560102, India</p>
+							</div>
+							</div>
+							<div class="padding-0 col-xs-12 col-sm-4 col-md-2 col-lg-2 text-right"> 
+								
+							<div class=""style="float:right">
+								<div class="ratting">
+                                    <p class="fontsize3 mb-0 ratting-text">3.9<span class="ratting-text2">/5</span></p>
+								</div>
+								<!--<p class="text-center fontsize4 clearfix grey-text mt-5"> 111 votes </p>-->
+												
+							</div>
+							</div>
+						  <div class="ui divider clear"></div>
+							<!--<div class="padding-0 col-md-12 col-lg-12 mb-12"> 
+							<button type="button" class="btn btn-default grey-text ratting-button">
+							<span class="nib"> <img class="img-responsive" src="img/fountain-pen.png"></span> Add a Review                                                  
+							</button> 
+							<button type="button" class="btn btn-default grey-text ratting-button">
+							<i class="fa fa-star " aria-hidden="true"></i> Rate
+							</button>
+							</div> -->
+							
+						
+						<input type="hidden" id="page_click_from" name="page_click_from" value="store-location">
+						<div class="col-md-4 col-sm-4 col-xs-12" style="padding: 0px;">
+						<a class="btn btn-primary order-now-button" href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" style="display:inline-block; width:initial;border-radius:4px;" > Order Online </a></div>
+						
+						
+						</div>
+					</div> <!-- End Col-md-8 -->
+					<div class="padding-0-mob pl-0 hidden-xs hidden-sm col-md-4 col-lg-4">
+					<!--<div class="map-sec">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.0670978321914!2d72.82054648637366!3d19.005414961287958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce96b27cc0ed%3A0xe0689f8761c13b44!2sDomino&#39;s+Pizza!5e0!3m2!1sen!2sin!4v1512226952077" width="100%" height="465" frameborder="0" style="border:0" allowfullscreen></iframe> 
+					</div>
+					</div> <!-- End Col-md-4 -->
+				<div class="col-lg-4 on-mobile map-desktop fix-height-store" id="map-container">
+
+					<div id="map"></div>
+
+				
+
+						
+
+					
+
+					
+
+					
+					
+
+				
+
+
+					</div>  <!-- End Col-md-4 -->
+				</div> <!-- End 1st row -->
+				<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 left-section">
+
+					<div class="padding-0 col-sm-12 col-md-12 col-lg-12 mb-20">
+					<div id="" class="">	
+						<div class="MobileMenuContainer">
+						<ul class="nav nav-tabs cus-nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#veg_pizza" aria-controls="veg_pizza" role="tab" data-toggle="tab" class="veg-con">Veg Pizza's</a></li>
+                            <li role="presentation" class=""><a href="#nonveg_pizza" aria-controls="nonveg_pizza" role="tab" data-toggle="tab">Non Veg Pizza's</a></li>
+                            <li role="presentation" class=""><a href="#burger_pizza" aria-controls="burger_pizza" role="tab" data-toggle="tab">Burger Pizza's</a></li>
+                            <li role="presentation" class=""><a href="#pizza_mania" aria-controls="pizza_mania" role="tab" data-toggle="tab">Pizza Mania</a></li>
+							<li role="presentation" class=""><a href="#sides" aria-controls="sides" role="tab" data-toggle="tab">Sides</a></li>
+						</ul>
+                        </div>
+
+						<div class="tab-content cus-tab-content">
+							<div role="tabpanel" class="tab-pane active" id="veg_pizza">
+				<div class="row mb-0 cus-flex">                    
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/vegextra.jpg" alt="Black Olives, Onion, Crisp Capsicum, Mushroom, FreshTomato, Golden Corn, Jalapeno &amp; Extra Cheese." title="Black Olives, Onion, Crisp Capsicum, Mushroom, FreshTomato, Golden Corn, Jalapeno &amp; Extra Cheese.">
+				</div>
+				<div class="col-md-12">
+					<h3>Veg Extravaganza</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Black Olives, Onion, Crisp Capsicum, Mushroom, FreshTomato, Golden Corn, Jalapeno &amp; Extra Cheese.
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+					<img class="pizza_img" src="/store-location/img/menu/Cloud9.jpg" alt="Onion, Tomato, Babycorn, Paneer, Crisp Capsicum &amp; Jalapeno" title="Onion, Tomato, Babycorn, Paneer, Crisp Capsicum &amp; Jalapeno">
+				</div>
+				<div class="col-md-12">
+					<h3>Cloud 9</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Onion, Tomato, Babycorn, Paneer, Crisp Capsicum &amp; Jalapeno
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+					<img class="pizza_img" src="/store-location/img/menu/ChefsVegWonderMain9.jpg" alt="Mushroom, Jalepeno, Babycorn, Crisp Capsicum, Paneer &amp; Red Paprika" title="Mushroom, Jalepeno, Babycorn, Crisp Capsicum, Paneer &amp; Red Paprika">
+				</div>
+				<div class="col-md-12">
+					<h3>Chef's Veg Wonder</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Mushroom, Jalepeno, Babycorn, Crisp Capsicum, Paneer &amp; Red Paprika
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			
+           </div> <!-- end flex row -->                        
+                                    
+                                    
+                                    
+                                    
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/peppypaneer.jpg" alt="Paneer, Crisp Capsicum &amp; Red Paprika" title="Paneer, Crisp Capsicum &amp; Red Paprika">
+				</div>
+				<div class="col-md-12">
+					<h3>Peppy Paneer</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Paneer, Crisp Capsicum &amp; Red Paprika
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/deluxeveg.jpg" alt="Onion, Crisp Capsicum, Mushroom, Golden Corn &amp; Paneer" title="Onion, Crisp Capsicum, Mushroom, Golden Corn &amp; Paneer">
+				</div>
+				<div class="col-md-12">
+					<h3>Deluxe Veggie</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Onion, Crisp Capsicum, Mushroom, Golden Corn &amp; Paneer
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/five-peppers.jpg" alt="Capsicum, Red and Yellow Bell Pepper, Jalapeno &amp; Red Paprika" title="Capsicum, Red and Yellow Bell Pepper, Jalapeno &amp; Red Paprika">
+				</div>
+				<div class="col-md-12">
+					<h3>5 Pepper</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Capsicum, Red and Yellow Bell Pepper, Jalapeno &amp; Red Paprika
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div> 
+            </div> <!--end flex row-->
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/VeggieParadise.jpg" alt="Babycorn, Black Olives, Crisp Capsicum &amp; Red Paprika" title="Babycorn, Black Olives, Crisp Capsicum &amp; Red Paprika">
+				</div>
+				<div class="col-md-12">
+					<h3>Veggie Paradise</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Babycorn, Black Olives, Crisp Capsicum &amp; Red Paprika
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/countryspecial.jpg" alt="Onion, Crisp Capsicum &amp; Fresh Tomato" title="Onion, Crisp Capsicum &amp; Fresh Tomato">
+				</div>
+				<div class="col-md-12">
+					<h3>Country Special</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Onion, Crisp Capsicum &amp; Fresh Tomato
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/farmhouse.jpg" alt="Onion, Crisp Capsicum, Mushroom &amp; Fresh Tomato" title="Onion, Crisp Capsicum, Mushroom &amp; Fresh Tomato">
+				</div>
+				<div class="col-md-12">
+					<h3>Farmhouse</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Onion, Crisp Capsicum, Mushroom &amp; Fresh Tomato
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+            </div> <!--end flex row-->
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/mexgreen.jpg" alt="Onion, Crisp Capsicum, Fresh Tomato &amp; Jalapeno sprinkled with exotic Mexican Herbs" title="Onion, Crisp Capsicum, Fresh Tomato &amp; Jalapeno sprinkled with exotic Mexican Herbs">
+				</div>
+				<div class="col-md-12">
+					<h3>Mexican Green Wave </h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Onion, Crisp Capsicum, Fresh Tomato &amp; Jalapeno sprinkled with exotic Mexican Herbs
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/margherita.jpg" alt="Double Cheese Margherita Loaded with extra cheese!" title="Double Cheese Margherita Loaded with extra cheese!">
+				</div>
+				<div class="col-md-12">
+					<h3>Double Cheese Margherita </h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Loaded with extra cheese!
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/spicytripletangoMainMenu5.jpg" alt="Spicy Triple Tango" title="Spicy Triple Tango">
+				</div>
+				<div class="col-md-12">
+					<h3>Spicy Triple Tango </h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Golden Corn, Jalapeno &amp; Red Paprika
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+			</div> <!--end flex row-->
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/margherita.jpg">
+				</div>
+				<div class="col-md-12">
+					<h3>Margherita </h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Single Cheese Topping
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+			</div>
+                <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+                <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+			</div> <!-- end flex row -->
+            </div> <!--####### veg_pizza End  ##########-->
+            
+            <div role="tabpanel" class="tab-pane" id="nonveg_pizza">
+              <div class="row mb-0 cus-flex">                    
+                   	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Non-Veg-Supreme.jpg" alt="Black Olives, Onion, Crisp Capsicum, Mushroom, Hot n Spicy Chicken, Chunky Chicken" title="Black Olives, Onion, Crisp Capsicum, Mushroom, Hot n Spicy Chicken, Chunky Chicken">
+				</div>
+				<div class="col-md-12">
+					<h3>Non Veg Supreme</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Black Olives, Onion, Crisp Capsicum, Mushroom, Hot n Spicy Chicken, Chunky Chicken
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/ChickenDominator10.jpg" alt="Grilled Chicken rashers, Double Barbeque Chicken, Exotic Chicken Salami, Hot 'n' Spicy Chicken &amp; Italian sausage" title="Grilled Chicken rashers, Double Barbeque Chicken, Exotic Chicken Salami, Hot 'n' Spicy Chicken &amp; Italian sausage">
+				</div>
+				<div class="col-md-12">
+					<h3>Chicken Dominator</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Grilled Chicken rashers, Double Barbeque Chicken, Exotic Chicken Salami, Hot 'n' Spicy Chicken &amp; Italian sausage
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+            <div class="row mb-0 cus-flex">     
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/bbqchkn.jpg" alt="Onion &amp; Barbeque chicken" title="Onion &amp; Barbeque chicken">
+				</div>
+				<div class="col-md-12">
+					<h3>Barbeque Chicken</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Onion &amp; Barbeque chicken
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/chunky-chicken.jpg" alt="Chunky Chicken, Spicy Chicken, Onion &amp; Capsicum" title="Chunky Chicken, Spicy Chicken, Onion &amp; Capsicum">
+				</div>
+				<div class="col-md-12">
+					<h3> Chicken Fiesta</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Chunky Chicken, Spicy Chicken, Onion &amp; Capsicum
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/mexchkn.jpg" alt="Onion, Fresh Tomato,Red Paprika &amp; Hot n Spicy Chicken sprinkled with exotic Mexican Herbs" title="Onion, Fresh Tomato,Red Paprika &amp; Hot n Spicy Chicken sprinkled with exotic Mexican Herbs">
+				</div>
+				<div class="col-md-12">
+					<h3> Chicken Mexicana</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Onion, Fresh Tomato,Red Paprika &amp; Hot n Spicy Chicken sprinkled with exotic Mexican Herbs
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div><!-- end cus-flex-->
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/golden.jpg" alt="Golden Corn, Double Barbeque Chicken &amp; Extra Cheese" title="Golden Corn, Double Barbeque Chicken &amp; Extra Cheese">
+				</div>
+				<div class="col-md-12">
+					<h3> Chicken Golden Delight</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Golden Corn, Double Barbeque Chicken &amp; Extra Cheese
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/ChefsChickenChoice7.jpg" alt="chicken rashers, Black Olives, Crisp Capsicum &amp; Red Paprika" title="chicken rashers, Black Olives, Crisp Capsicum &amp; Red Paprika">
+				</div>
+				<div class="col-md-12">
+					<h3> Chef's Chicken Choice</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							chicken rashers, Black Olives, Crisp Capsicum &amp; Red Paprika
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/cheesebbq.jpg" alt="Cheese &amp; Bbq Chicken" title="Cheese &amp; Bbq Chicken">
+				</div>
+				<div class="col-md-12">
+					<h3> Cheese &amp; Bbq Chicken</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Cheese &amp; Bbq Chicken
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div> 
+			</div> <!--end cus-flex-->
+					
+			<div class="row mb-0 cus-flex">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/ChickenSalamiSpecial.jpg" alt="Cheese &amp; Exotic Chicken Salami" title="Cheese &amp; Exotic Chicken Salami">
+				</div>
+				<div class="col-md-12">
+					<h3> Chicken Salami Special</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Cheese &amp; Exotic Chicken Salami
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+                <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+                <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+			</div> <!-- end flex row -->
+            </div> <!-- #nonveg_pizza End  -->
+                            
+             
+            <div role="tabpanel" class="tab-pane" id="burger_pizza">
+              <div class="row mb-0 cus-flex">
+                    	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Burger_PizzaVeg.jpg" alt="Crisp Capsicum l Tomato" title="Crisp Capsicum l Tomato">
+				</div>
+				<div class="col-md-12">
+					<h3>Burger Pizza- Classic Veg</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Crisp Capsicum l Tomato
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Burger_PizzaVeg.jpg" alt="Crisp Capsicum l Tomato l Red Paprika l Paneer" title="Crisp Capsicum l Tomato l Red Paprika l Paneer">
+				</div>
+				<div class="col-md-12">
+					<h3>Burger Pizza- Premium Veg</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Crisp Capsicum l Tomato l Red Paprika l Paneer
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Burger_PizzaVeg.jpg" alt="Tomato l Jalapeno and Hot n Spicy Chicken" title="Tomato l Jalapeno and Hot n Spicy Chicken">
+				</div>
+				<div class="col-md-12">
+					<h3>Burger Pizza- Classic Non Veg</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Tomato l Jalapeno and Hot n Spicy Chicken
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>            
+              </div>  <!--end cus-flex  --> 
+            <div class="row mb-0 cus-flex">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Burger_PizzaVeg.jpg" alt="Tomato l Jalapeno l Chicken Italian Sausage and Grilled Chicken Rashers" title="Tomato l Jalapeno l Chicken Italian Sausage and Grilled Chicken Rashers">
+				</div>
+				<div class="col-md-12">
+					<h3>Burger Pizza- Premium Non Veg</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Tomato l Jalapeno l Chicken Italian Sausage and Grilled Chicken Rashers
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div> 
+			
+                <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+                <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+			</div> <!-- end flex row --> 
+              </div>  <!--end #burger_pizza  -->  
+                            
+        <div role="tabpanel" class="tab-pane" id="pizza_mania">
+              <div class="row mb-0 cus-flex">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/PrimeLoadedL.jpg" alt="Fresh Tomato I Jalapeno I Mushroom I Crispy Beans I Bake Sprinkle" title="Fresh Tomato I Jalapeno I Mushroom I Crispy Beans I Bake Sprinkle">
+				</div>
+				<div class="col-md-12">
+					<h3>VEG LOADED</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Fresh Tomato I Jalapeno I Mushroom I Crispy Beans I Bake Sprinkle
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/PrimeSpicyL.jpg" alt="Habanero sauce IRed I Yellow Bell Peppers IRed Chili Flakes." title="Habanero sauce IRed I Yellow Bell Peppers IRed Chili Flakes.">
+				</div>
+				<div class="col-md-12">
+					<h3>VEG SPICY</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Habanero sauce IRed I Yellow Bell Peppers IRed Chili Flakes.
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/PrimeCheesyL.jpg" alt="Gouda sauce I Orange Cheddar Cheese I Mozzarella" title="Gouda sauce I Orange Cheddar Cheese I Mozzarella">
+				</div>
+				<div class="col-md-12">
+					<h3>CHEESY</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Gouda sauce I Orange Cheddar Cheese I Mozzarella
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+			<div class="row mb-0 cus-flex">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/PrimeHerbyL.jpg" alt="Basil Dressing IGreen Capsicum IBaby corn IBasil Parsley" title="Basil Dressing IGreen Capsicum IBaby corn IBasil Parsley">
+				</div>
+				<div class="col-md-12">
+					<h3>VEG HERBY</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Basil Dressing IGreen Capsicum IBaby corn IBasil Parsley
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>	
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/paneer_onion_veg.jpg" alt="Masala Paneer portions I Onion the perfect compliment" title="Masala Paneer portions I Onion the perfect compliment">
+				</div>
+				<div class="col-md-12">
+					<h3>PANEER &amp; ONION</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Masala Paneer portions I Onion the perfect compliment
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/CapsicumVeg.jpg" alt="Laden with zesty crisp capsicum" title="Laden with zesty crisp capsicum">
+				</div>
+				<div class="col-md-12">
+					<h3>CAPSICUM</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Laden with zesty crisp capsicum
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+            <div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/onion_veg.jpg" alt="Premier pizza mania with a generous topping of fresh onion" title="Premier pizza mania with a generous topping of fresh onion">
+				</div>
+				<div class="col-md-12">
+					<h3>ONION</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Premier pizza mania with a generous topping of fresh onion
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/golden_corn_veg.jpg" alt="Delighting your taste buds with flavorful golden corn" title="Delighting your taste buds with flavorful golden corn">
+				</div>
+				<div class="col-md-12">
+					<h3>GOLDEN CORN</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Delighting your taste buds with flavorful golden corn
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/LoadedC.jpg" alt="Exotic Chicken Salami IHot'n'Spicy Chicken ICrispy Beans IBake Sprinkle" title="Exotic Chicken Salami IHot'n'Spicy Chicken ICrispy Beans IBake Sprinkle">
+				</div>
+				<div class="col-md-12">
+					<h3>NON VEG LOADED</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Exotic Chicken Salami IHot'n'Spicy Chicken ICrispy Beans IBake Sprinkle
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+			
+			<div class="row mb-0 cus-flex">
+	           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/SpicyL.jpg" alt="Habanero sauce IHot n Spicy Chicken IRed Paprika IRed Chili Flakes." title="Habanero sauce IHot n Spicy Chicken IRed Paprika IRed Chili Flakes.">
+				</div>
+				<div class="col-md-12">
+					<h3>NON VEG SPICY</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Habanero sauce IHot n Spicy Chicken IRed Paprika IRed Chili Flakes.
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/HerbyL.jpg" alt="Basil Dressing I Chicken Italian Sausage I Green Capsicum I Basil Parsley" title="Basil Dressing I Chicken Italian Sausage I Green Capsicum I Basil Parsley">
+				</div>
+				<div class="col-md-12">
+					<h3>NON VEG HERBY</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Basil Dressing I Chicken Italian Sausage I Green Capsicum I Basil Parsley
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Bbq_chicken2.jpg" alt="Topping of Barbeque Chicken that's smoky I sweet all at the same time" title="Topping of Barbeque Chicken that's smoky I sweet all at the same time">
+				</div>
+				<div class="col-md-12">
+					<h3>BBQ CHICKEN</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Topping of Barbeque Chicken that's smoky I sweet all at the same time
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+            <div class="row mb-0 cus-flex">
+                
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/chunky_chicken3.jpg" alt="Basil Dressing IGreen Capsicum IBaby corn IBasil Parsley." title="Basil Dressing IGreen Capsicum IBaby corn IBasil Parsley.">
+				</div>
+				<div class="col-md-12">
+					<h3>CHUNKY CHICKEN</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							Basil Dressing IGreen Capsicum IBaby corn IBasil Parsley.
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			<div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+            <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+			</div> <!-- end flex row --> 
+            </div>  <!--end #pizza_mania  -->  
+
+
+		
+                            
+                            
+            <div role="tabpanel" class="tab-pane" id="sides">
+            <div class="row mb-0 cus-flex">
+                	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/White-Pasta_Veg.jpg" alt="WHITE PASTA ITALIANO VEG " title="WHITE PASTA ITALIANO VEG ">
+				</div>
+				<div class="col-md-12">
+					<h3>WHITE PASTA ITALIANO VEG</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Garlic_bread.jpg" alt="GARLIC BREADSTICKS" title="GARLIC BREADSTICKS">
+				</div>
+				<div class="col-md-12">
+					<h3>GARLIC BREADSTICKS</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/White-Pasta_Nvg.jpg" alt="WHITE PASTA ITALIANO NON-VEG" title="WHITE PASTA ITALIANO NON-VEG">
+				</div>
+				<div class="col-md-12">
+					<h3>WHITE PASTA ITALIANO NON-VEG</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+			
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Stuffed_garlic_Bread.jpg" alt="STUFFED GARLIC BREADSTICKS" title="STUFFED GARLIC BREADSTICKS">
+				</div>
+				<div class="col-md-12">
+					<h3>STUFFED GARLIC BREADSTICKS</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Parcel_Nonveg.jpg" alt="CHICKEN PARCEL" title="CHICKEN PARCEL">
+				</div>
+				<div class="col-md-12">
+					<h3>CHICKEN PARCEL</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/chknwings.jpg" alt="CHICKEN WINGS" title="CHICKEN WINGS">
+				</div>
+				<div class="col-md-12">
+					<h3>CHICKEN WINGS</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+			
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Parcel_Veg.jpg" alt="VEG PARCEL" title="VEG PARCEL">
+				</div>
+				<div class="col-md-12">
+					<h3>VEG PARCEL</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Choco_Lava.jpg" alt="LAVA CAKE" title="LAVA CAKE">
+				</div>
+				<div class="col-md-12">
+					<h3>LAVA CAKE</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/new_jalapeno.jpg" alt="CHEESE JALAPENO DIP" title="CHEESE JALAPENO DIP">
+				</div>
+				<div class="col-md-12">
+					<h3>CHEESE JALAPENO DIP</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+			
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Taco_Nvg.jpg" alt="TACO MEXICANA NON VEG" title="TACO MEXICANA NON VEG">
+				</div>
+				<div class="col-md-12">
+					<h3>TACO MEXICANA NON VEG</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/new_cheesy.jpg" alt="CHEESY DIP" title="CHEESY DIP">
+				</div>
+				<div class="col-md-12">
+					<h3>CHEESY DIP</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Taco_Veg.jpg" alt="TACO MEXICANA VEG" title="TACO MEXICANA VEG">
+				</div>
+				<div class="col-md-12">
+					<h3>TACO MEXICANA VEG</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Coke.jpg" alt="COKE MOBILE " title="COKE MOBILE">
+				</div>
+				<div class="col-md-12">
+					<h3>COKE MOBILE</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Crispy_Chicken_Strips.jpg" alt="CRISPY CHICKEN STRIPS" title="CRISPY CHICKEN STRIPS">
+				</div>
+				<div class="col-md-12">
+					<h3>CRISPY CHICKEN STRIPS</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Fanta.jpg" alt="FANTA MOBILE" title="FANTA MOBILE">
+				</div>
+				<div class="col-md-12">
+					<h3>FANTA MOBILE</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			</div> <!--end cus-flex-->
+			
+			<div class="row mb-0 cus-flex">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Choco_Pizza.jpg" alt="CHOCO PIZZA" title="CHOCO PIZZA">
+				</div>
+				<div class="col-md-12">
+					<h3>CHOCO PIZZA</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow">
+				<div class="col-md-12">
+						<img class="pizza_img" src="/store-location/img/menu/Sprite.jpg" alt="SPRITE MOBILE" title="SPRITE MOBILE">
+				</div>
+				<div class="col-md-12">
+					<h3>SPRITE MOBILE</h3>
+					
+				</div>
+				<div class="col-md-12">
+					<p class="pizza_content">
+							
+						</p>
+						<a href="https://pizzaonline.dominos.co.in/?src=local&utm_source=restaurant-dominos-local&utm_medium=store-locator-buy-online&utm_campaign=store-local" class="btn btn-primary btn-sm orderButton" >Order Now</a>
+				</div>
+				
+			</div>
+
+            <div class="col-md-4 shadow hidden-xs" style="box-shadow: 1px 2px 5px 1px transparent !important; background: transparent !important;"></div>
+			</div> <!-- end flex row --> 
+            </div>  <!--end #slide  -->  
+
+
+		
+                            
+
+                            
+                    </div> <!-- End cus-tab-content  -->
+				    </div> <!-- End tab containt  -->
+					</div>
+
+					</div> <!-- End Col-md-12 -->
+					
+					</div>   <!-- End 2st row -->
+				</div><!--End container container-mobile -->
+ 
+        </section>
+                <section class="blue outlet-near_1 outlet-near_5">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="white-outlet-brand">
+                    <h3 class="nearby-outlet-head"> <span class="near-span-outlet"> Nearby Dominos Outlets </span> <span
+                            class="near-span-outlet-inner"></span> </h3>
+        
+                            <ul id="flexiselDemo3" class="slider_enterprise_near_by_outlets nbs-flexisel-ul"
+                                style="display: block; left: 0px;">
+                                        <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/airport-road" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> AIRPORT ROAD </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> SHOP NO. G-2, G-3, G-4,NEXT TO TOTAL, SKYLARK PALAZZO, CORPORATION NO.98,MURUGESHPALAYA,AIRPORT ROAD,,BANGALORE - 560017 PH.NO. 080-25233391-94/ 25233396/ 25232351-53/ 41263729 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/sarjapur-road" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> SARJAPUR ROAD </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> NO. 18/2A, ANMBALIPURA VILLAGE, VARTHUR HOBLI, BELLANDUR GATE, OPP. IDEB SPRING FIELDS, SARJAPUR MAIN ROAD,,BANGALORE - 560034 PH.NO. 080-28440901 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/outer-ring-road" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> OUTER RING ROAD </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> 71, MAHADEVPURAMARATHALLI- KR PURAM OUTER RING ROADNR. MARATHALLI BRIDGE PROPERTY NO 27,HOBLI, OUTER RING ROAD,,BANGALORE - 560037 PH.NO. 9538871767-9538135767-9538975757 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/rmz-ecospace" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> ECO SPACE - BANGALORE </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> Survey No 51 to 64/4 & 66/1,Food Court Ground Floor,Pritech Park,Bellandure Village,Banagalore-560103,PH.no-080-41534484 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Dining </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/egl-domlur" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> EGL DOMLUR </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> PYRAMID FOOD COURT, EMBASSY GOLFLING PARK,SURVEY NO. 7/1 AND 7/3DOMLUR,,BANGALORE - 560071 PH.NO. 08046846200/ 42436116 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Dining </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/bellandur-village" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> BELLANDUR VILLAGE </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> SRI GOWRIKSHNA ARCADE, Survey No 78/5, Bellandur Main Road, Opp Rama Temple, Behind Central Mall BANGALORE - 560103 Ph No : 080 25740888 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/kormangla-4th-block-bangalore" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> KORMANGLA, 4TH BLOCK </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> PROMS GROUND FLOOR, NO 776, 80FT ROAD, KORAMANGALA 4TH BLOCK, BANGALORE-560034, PH-NO:080-49360888 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/total-mall-kaikondarahalli-bangalore" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> TOTAL MALL, KAIKONDARAHALLI </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> First Floor, Total super Store Survey No.12/5, Sarjapur Rd, Ambalipura, Harlur,Bangalore, Karnatka  560103PH080-28440933 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/kadubesanahalli-bangalore-karnataka" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> KADUBESANAHALLI </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> Survey no 36/1, Ground floor, Kadubisanahalli Village, Outer Ring Road, Opp JP Morgan, Bangalore 560087 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/rmz-ecoworld-bangalore" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> RMZ ECOWORLD BANGALORE </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> RMZ Eco WorldShop No 1 Food Court First Floor  THE BAY Tower 1 Sarjapur Marthalli Outer Ring Road Devarabeesanahalli Bangalore-560103Karnataka </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/hsr-layout-sector-1-bangalore" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> HSR LAYOUT, SECTOR 1, BANGALORE </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> Ground Floor No 2738 HSR Layout Sector 1 27th Main road Bangalore Karnataka PIN 560102 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/doddakannelli-sarjapur-road-bangalore" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> DODDAKANNELLI SARJAPUR ROAD BANGALORE KARNATAKA </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> Ground Floor Property no 22 Sy No 58/1 58/2 58/3 Old Sy No 58 Doddakannelli village Sarjapur Road Bangalore 560035 Karnataka </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                                                <li class="nbs-flexisel-item" style="width: 345px;">
+                                    <div class="inner-part near-by-outlet-manage">
+                                        <div class="inner-part-2 gap-issue background-shadow-mng manage-height-default">
+                                            <h4> <a class="ga-id" href="/store-location/bangalore/embassy-techvillage-bangalore" data-page-name="home_page"
+                                                    data-ga-type="near_by_outlets" data-outlet-id="1430"> EMBASSY TECHVILLAGE,BANGALORE </a>
+                                            </h4>
+<!--                                            <div class="rating1">
+                                                <ul>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_full"></span></li>
+                                                    <li class="nbs-flexisel-item"><span class="rating_empty"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <p> Embassy Tech Village,Food Court,Ground FloorCircuit Club complex,Deverbeesanhalli Village,Outer Ring Road,Bangaloreâ€“ 560037,Karnataka PH No,-9755549488 </p>
+                                            <ul class="mng-left-banner-span mng-span-leftB">
+                                                <li class="nbs-flexisel-item"> <span class="clr-manage">11:00 am - 11:00 pm</span> </li>
+                                            </ul>
+                                            <p class="service_test_drive"> <span> Delivery </span> </p>
+                                        </div> <span class="background-mng-shadow"></span>
+                                    </div>
+                                </li>
+                         </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+        		</div> <!-- wrapper -->
+ 
+  
+<!--My Footer Starts-->
+	<footer>
+        
+        <div id="sub-footer">
+            <div class="container">
+                
+			   <div class="row">
+               
+                    <div class="col-md-2">
+                       <h4 class="font-footer"><a href="https://www.dominos.co.in/menu" title="Domino's Menu"> Menu </a></h4> 
+					     <ul class="link-list ">
+                            <li><a class="menu-color" href="https://www.dominos.co.in/menu/veg-pizzas" target="_blank">Veg Pizza</a> </li>
+                            <li><a class="menu-color" href="https://www.dominos.co.in/menu/non-veg-pizzas" target="_blank">Non-Veg Pizza</a> </li>
+                            <li><a class="menu-color" href="https://www.dominos.co.in/menu/side-orders" target="_blank">Side Orders</a> </li>
+                           <li><a class="menu-color" href="https://www.dominos.co.in/menu/beverages" target="_blank">Beverages</a> </li>
+                            <li><a class="menu-color" href="https://www.dominos.co.in/menu/pizza-mania" target="_blank">Pizza Mania</a> </li>
+							<li><a class="menu-color" href="https://www.dominos.co.in/menu/burger-pizza" target="_blank">Burger Pizza</a> </li>
+							<li><a class="menu-color" href="https://www.dominos.co.in/great-deals/online-pizza-coupons/" target="_blank">Coupons & Offers</a> </li>
+                        </ul>
+                    </div>
+					
+					<div class="col-md-2">
+                         <h4 style="color:#fff;">Pizza Restaurants</h4>
+						 <ul class="link-list">
+						  <li><a class="menu-color" href="https://www.dominos.co.in/store-location/" target="_blank">Store Finder</a> </li>
+                                                  <li><a class="menu-color" href="https://www.dominos.co.in/pizza-near-me/" target="_blank">Nearby Pizza Stores</a> </li>
+						  </ul>
+						 
+                    </div>
+					
+					<div class="col-md-2">
+                         <h4><a href="https://www.dominos.co.in/" title="Domino's Pizza"> Dominos Pizza</a></h4>
+						  <ul class="link-list">
+                             <li><a class="menu-color" href="https://www.dominos.co.in/about-us" target="_blank">About Us</a> </li>
+							 
+                            <li><a class="menu-color" href="https://www.dominos.co.in/feedback" title="" target="_blank" data-original-title="FEEDBACK">Feedback</a> </li>
+                             <li><a class="menu-color" href="https://www.dominos.co.in/advertisement" title="" target="_blank" data-original-title="ADS">Ads</a></li>
+                         </ul>
+                    </div>
+					
+					<div class="col-md-2">
+                         <h4 style="color:#fff;"> Domino’s Policies</h4>
+						 <ul class="link-list">
+                           <li><a class="menu-color" href="https://pizzaonline.dominos.co.in/termsandconditions" target="_blank">Terms & Conditions</a> </li>
+                           <li><a class="menu-color" href="https://www.dominos.co.in/privacy-policy" target="_blank">Privacy Policy</a> </li>
+                          <li><a class="menu-color" href="https://www.dominos.co.in/disclaimer" target="_blank">Disclaimer</a> </li>
+                         </ul>
+                    </div>
+					
+					<div class="col-md-2">
+                         <h4> 
+						 <a href="https://pizzaonline.dominos.co.in/" title="Order Pizza" >Order Pizza In</a>
+						 </h4>
+						 <ul class="link-list">
+							<li><a class="menu-color" href="https://www.dominos.co.in/store-location/bangalore" target="_blank">Bangalore</a> 
+							<li><a class="menu-color" href="https://www.dominos.co.in/store-location/chennai" target="_blank">Chennai</a> 
+							<li><a class="menu-color" href="https://www.dominos.co.in/store-location/new-delhi" target="_blank">New Delhi</a> 
+							<li><a class="menu-color" href="https://www.dominos.co.in/store-location/gurgaon" target="_blank">Gurgaon</a> 
+                            <li><a class="menu-color" href="https://www.dominos.co.in/store-location/hyderabad" target="_blank">Hyderabad</a> 
+                            <li><a class="menu-color" href="https://www.dominos.co.in/store-location/kolkata" target="_blank">Kolkata</a> 
+							<li><a class="menu-color" href="https://www.dominos.co.in/store-location/mumbai" target="_blank"> Mumbai</a> 
+                            <li><a class="menu-color" href="https://www.dominos.co.in/store-location/noida" target="_blank">Noida</a> 
+                            <li><a class="menu-color" href="https://www.dominos.co.in/store-location/pune" target="_blank">Pune</a> 
+                         </ul>
+                    </div>
+					
+					<div class="col-md-2">
+                         <h4 style="color:#fff;">Follow Us </h4>
+                    
+					<ul class="social-network">
+		
+						<li><a href="https://www.facebook.com/dominospizzaindia/" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/dominos_india" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://in.pinterest.com/dominosindia/" data-placement="top" title="" data-original-title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="https://plus.google.com/+dominosindia" data-placement="top" title="" data-original-title="google-plus"><i class="fa fa-google-plus"></i></a></li>
+						
+					</ul>
+					<div class="row app-margin">
+					<h4 class="ddp-margin">Download Domino's App</h4>
+					<a href="https://play.google.com/store/apps/details?id=com.Dominos&hl=en" data-placement="top" target="_blank" title="Dominos Android Mobile App">
+					<img src="/store-location/img/googleplay.png" class="img-responsive gp-res" alt="Download Dominos Android Mobile App on Google Play Store"></a>
+					<a href="https://itunes.apple.com/in/app/dominos-pizza-india/id523106486?mt=8" target="_blank" title="Dominos IOS Mobile App">
+					<img src="/store-location/img/appstore.png" class="img-responsive ap-res" alt="Download Dominos IOS Mobile App on Apple Store"></a>
+				    </div>
+				    </div>
+        </div>
+    </footer>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/store-location/js/jquery.min.js"></script>
+    <script src="/store-location/js/modernizr.custom.js"></script>
+    <script src="/store-location/js/jquery.easing.1.3.js"></script>
+    <script src="/store-location/js/bootstrap.min.js"></script>
+    <script src="/store-location/js/jquery.appear.js"></script>
+    <script src="/store-location/js/stellar.js"></script>
+    <script src="/store-location/js/classie.js"></script>
+    <script src="/store-location/js/uisearch.js"></script>
+    <script src="/store-location/js/jquery.cubeportfolio.min.js"></script>
+    <script src="/store-location/js/google-code-prettify/prettify.js"></script>
+    <script src="/store-location/js/animate.js"></script>
+    <script src="/store-location/js/custom.js"></script>
+    <script src="/store-location/js/jquery.flexisel.js"></script>
+    
+	
+	<!-- jQuery  -->
+    <script src="/store-location/assets/js/animsition.min.js"></script>
+    <script src="/store-location/owl.carousel/owl.carousel.min.js"></script>
+    <!-- Kupon js -->
+    <script src="/store-location/assets/js/kupon.js"></script>
+            
+    <script>
+                $(document).click(function(e) {
+	           
+			if ($(e.target).is('#side-menu,.noActionOnBodyClick')) {
+			
+			document.getElementById("side-menu").style.width = "220px";
+			return false;
+			}
+			else {
+				
+				document.getElementById("side-menu").style.width = "0px";
+			}
+		  });
+    </script>        
+<script>
+
+$('.comment-click').collapse({
+    toggle: false
+  });
+
+$(window).load(function () {
+            $(".slider_enterprise_near_by_outlets").flexisel({
+                visibleItems: 3,
+                enableResponsiveBreakpoints: !0,
+                animationSpeed: 200,
+                visibleItems: 3,
+                infinite: false
+            })
+        });
+</script>
+<script>
+
+      function initMap() {
+
+        var uluru = {lat: 12.926269, lng: 77.675434};
+		console.log(uluru);
+        var map = new google.maps.Map(document.getElementById('map'), {
+
+          zoom: 16,
+
+          center: {lat: 12.926269, lng: 77.675434}
+        });
+
+
+
+        var contentString = '<div >'+
+
+            '<div id="siteNotice">'+
+
+            '</div>'+
+
+            '<h3 id="firstHeading" class="firstHeading">BANGALORE CENTRAL</h3>'+
+
+            '<div id="bodyContent">'+
+
+            '<p>Soul Space Spirit, 4th Floor Food Court, Outer Ring Road, Near Sarjapura Bellandur Junction, Bengaluru, Karnataka 560102, India</p>'+
+
+            '</div>'+
+
+            '</div>';
+
+
+
+        var infowindow = new google.maps.InfoWindow({
+
+          content: contentString
+
+        });
+
+
+
+        var marker = new google.maps.Marker({
+
+          position: uluru,
+
+          map: map,
+
+          title: 'BANGALORE CENTRAL '
+
+        });
+
+        marker.addListener('click', function() {
+
+          infowindow.open(map, marker);
+
+        });
+
+		infowindow.open(map, marker);
+
+
+      }
+
+    </script>
+	<script async defer
+
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClGVz7J5XMUpS7ztXhWHn_OrG5-iKTZwI&callback=initMap">
+
+    </script>
+    
+            
+	
+	<script type="application/ld+json">
+
+
+
+{
+
+
+
+ "@context": "https://schema.org",
+
+
+
+ "@type": "BreadcrumbList",
+
+
+
+ "itemListElement":
+
+
+
+ [
+
+
+
+  {
+
+
+
+   "@type": "ListItem",
+
+
+
+   "position": 1,
+
+
+
+   "item":
+
+
+
+   {
+
+
+
+    "@id": "https://www.dominos.co.in/",
+
+
+
+    "name": "Dominos Pizza"
+
+
+
+    }
+
+
+
+  },
+
+
+
+  {
+
+
+
+   "@type": "ListItem",
+
+
+
+  "position": 2,
+
+
+
+  "item":
+
+
+
+   {
+
+
+
+     "@id": "https://www.dominos.co.in/store-location/bangalore",
+
+
+
+     "name": "Bangalore"
+
+
+
+   }
+
+
+
+  },
+
+
+
+  {
+
+
+
+   "@type": "ListItem",
+
+
+
+  "position": 3,
+
+
+
+  "item":
+
+
+
+   {
+
+
+
+     "@id": "https://www.dominos.co.in/store-location/bangalore/bangalore-central",
+
+
+
+     "name": "BANGALORE CENTRAL"
+
+
+
+   }
+
+
+
+  },
+  {
+
+
+
+   "@type": "ListItem",
+
+
+
+  "position": 4,
+
+
+
+  "item":
+
+
+
+   {
+
+
+
+     "@id": "https://www.dominos.co.in/store-location/bangalore/bangalore-central/menu",
+
+
+
+     "name": "Menu"
+
+
+
+   }
+
+
+
+  }
+
+
+
+ ]
+
+
+
+}
+
+
+
+</script>
+            
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRBR-3e999030a12e14fece2","applicationID":"685069429","transactionName":"YlcAZEAHXEYHVhBfXFsdN0JbSURUFBoTQUQaQRZRVQ9cUktbAUEcXFwGVUpIQl0W","queueTime":0,"applicationTime":115,"atts":"ThADEggdT0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
